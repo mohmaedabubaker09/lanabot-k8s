@@ -1,0 +1,13 @@
+# k8s/service-demo.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: lanabot-service
+spec:
+  selector:
+    app: lana-bot
+  ports:
+    - protocol: TCP
+      port: 8443
+      targetPort: 8443
