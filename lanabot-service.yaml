@@ -10,7 +10,7 @@ metadata:
     release: v1.0
 spec:
   selector:
-    microservice: lana-bot
+    app: lana-bot
   ports:
     - protocol: TCP
       port: 8443
