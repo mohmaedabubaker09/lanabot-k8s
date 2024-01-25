@@ -5,13 +5,12 @@ kind: Service
 metadata:
   name: lanabot-service
   labels:
-    app: lana-bot
     project: lanabot-project
     env: dev
     release: v1.0
 spec:
   selector:
-    app: lana-bot
+    microservice: lana-bot
   ports:
     - protocol: TCP
       port: 8443
