@@ -5,6 +5,7 @@ kind: Service
 metadata:
   name: lanabot-service
   labels:
+    app: lana-bot
     project: lanabot-project
     env: dev
     release: v1.0
