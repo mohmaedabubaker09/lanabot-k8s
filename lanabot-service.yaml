@@ -1,16 +1,14 @@
-# k8s/service-demo.yaml
-
 apiVersion: v1
 kind: Service
 metadata:
-  name: lanabot-service
+  name: lanabot-ms-service
   labels:
-    project: lanabot-project
+    project: lanabot--project
     env: dev
     release: v1.0
 spec:
   selector:
-    microservice: lana-bot
+    microservice: lanabot-microservice
   ports:
     - protocol: TCP
       port: 8443
