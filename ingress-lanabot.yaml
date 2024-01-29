@@ -1,12 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: lanabot
+  name: lanabot-ingress
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
   labels:
-    project: lanabot-project
+    project: lanabot--project
     env: dev
     release: v1.0
 spec:
@@ -22,34 +22,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: lanabot-service
+            name: lanabot-ms-service
             port:
               number: 8443
   ingressClassName: nginx
-
-
-#apiVersion: networking.k8s.io/v1
-
-#kind: Ingress
-#metadata:
-#  name: lanabot
-#  annotations:
-#    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-#    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-#spec:
-#  tls:
-#  - hosts:
-#    - aa7efeb52e00748a897a58c171caab79-2082a31a9ce5a082.elb.us-east-1.amazonaws.com
-#    secretName: cert-name
-#  rules:
-#  - host: aa7efeb52e00748a897a58c171caab79-2082a31a9ce5a082.elb.us-east-1.amazonaws.com
-#    http:
-#      paths:
-#      - path: /lanbot
-#        pathType: Prefix
-#        backend:
-#          service:
-#            name: lana-bot-pod
-#            port:
-#              number: 8443
-#  ingressClassName: nginx
