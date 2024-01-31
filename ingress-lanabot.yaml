@@ -2,11 +2,11 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: lanabot-ingress
+  namespace: lanabot-ns
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
   labels:
-    project: lanabot--project
     env: dev
     release: v1.0
 spec:

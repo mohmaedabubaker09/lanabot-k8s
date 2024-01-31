@@ -1,16 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: lanabot-ns
   name: lanabot-ms-service
   labels:
-    project: lanabot--project
     env: dev
     release: v1.0
 spec:
   selector:
-    microservice: lanabot-microservice
+    app: lanabot-microservice
   ports:
     - protocol: TCP
       port: 8443
       targetPort: 8443
-
