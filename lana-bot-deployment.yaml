@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lana-bot-deployment
+  namespace: lanabot-ns
+  labels:
+    app: lanabot-microservice
+    env: dev
+    release: v1.0
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: lanabot-microservice
+  template:
+    metadata:
+      labels:
+        app: lanabot-microservice
+        env: dev
+        release: v1.0
+    spec:
+      containers:
+      - name: lanabot-docker-container
+        image: 933060838752.dkr.ecr.eu-west-2.amazonaws.com/lana_bot_container:238_20240206_204040
+        ports:
+        - containerPort: 8443
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 1000Mi
+          requests:
+            cpu: 1000m
+            memory: 1000Mi
+
