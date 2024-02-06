@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: lana-yolo-docker-container
-        image: 933060838752.dkr.ecr.eu-west-2.amazonaws.com/lana_yolo5_container:50_20240206_221501
+        image: 933060838752.dkr.ecr.eu-west-2.amazonaws.com/lana_yolo5_container:51_20240206_221546
         resources:
           limits:
             cpu: 1000m
