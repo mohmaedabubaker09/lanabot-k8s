@@ -6,6 +6,7 @@ metadata:
   labels:
     env: dev
     release: v1.0
+    project: lanabot-project
 spec:
   selector:
     app: lanabot-microservice

@@ -9,6 +9,7 @@ metadata:
   labels:
     env: dev
     release: v1.0
+    project: lanabot-project
 spec:
   tls:
   - hosts:
