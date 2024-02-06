@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lana-yolo-deployment
+  namespace: lanabot-ns
+  labels:
+    app: lana-yolo
+    env: dev
+    release: v1.0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lana-yolo
+  template:
+    metadata:
+      labels:
+        app: lana-yolo
+        env: dev
+        release: v1.0
+    spec:
+      containers:
+      - name: lana-yolo-docker-container
+        image: 933060838752.dkr.ecr.eu-west-2.amazonaws.com/lana_yolo5_container:47_20240206_211435
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 1000Mi
+          requests:
+            cpu: 1000m
+            memory: 1000Mi
