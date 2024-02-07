@@ -8,7 +8,7 @@ metadata:
     env: dev
     release: v1.0
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: lanabot-microservice
@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: lanabot-docker-container
-        image: 933060838752.dkr.ecr.eu-west-2.amazonaws.com/lana_bot_container:251_20240207_224133
+        image: 933060838752.dkr.ecr.eu-west-2.amazonaws.com/lana_bot_container:252_20240207_225113
         ports:
         - containerPort: 8443
         readinessProbe:
