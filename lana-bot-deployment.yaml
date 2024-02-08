@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: lanabot-docker-container
-        image: 933060838752.dkr.ecr.eu-west-2.amazonaws.com/lana_bot_container:264_20240208_093354
+        image: 933060838752.dkr.ecr.eu-west-2.amazonaws.com/lana_bot_container:265_20240208_111605
         ports:
         - containerPort: 8443
         readinessProbe:
