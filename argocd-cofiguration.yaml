@@ -1,25 +1,3 @@
-#apiVersion: argoproj.io/v1alpha1
-#kind: Application
-#metadata:
-#  name: lanabot
-#  namespace: argocd
-#spec:
-#  destination:
-#    name: ''
-#    namespace: lanabot-ns
-#    server: 'https://kubernetes.default.svc'
-#  source:
-#    path: /
-#    repoURL: 'https://github.com/mohmaedabubaker09/lanabot-k8s.git'
-#    targetRevision: HEAD
-#  sources: []
-#  project: lanabot-project
-#  syncPolicy:
-#    automated:
-#      selfHeal: false
-#      prune: true
-
-
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
